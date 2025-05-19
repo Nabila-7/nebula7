@@ -1,153 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hamburger Menu with Search Icon</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+.city {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;         /* Box border */
+  /border-radius: 8px;              /* Rounded corners */
+  margin: 15px;                    /* Space between blocks */
+  padding: 15px;                   /* Inner spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+cursor: pointer; /* makes it feel clickable */
+  transition: box-shadow 0.2s ease;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url('https://cdn.pixabay.com/photo/2022/07/26/19/03/space-7346533_1280.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-    }
+.city:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* subtle hover effect */
+}
 
-    /* Sidebar */
-    .side-menu {
-      position: fixed;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 250px;
-      background-color: rgba(68, 68, 68, 0.5);
-      backdrop-filter: blur(15px);
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-      padding-top: 60px;
-      color: white;
-      z-index: 1000;
-    }
-
-    .side-menu.active {
-      transform: translateX(0);
-    }
-
-    .side-menu a {
-      display: flex;
-      align-items: center;
-      padding: 18px 20px;
-      text-decoration: none;
-      color: white;
-      transition: background-color 0.2s ease;
-    }
-
-    .side-menu a:hover {
-      background-color: #555;
-    }
-
-    .side-menu i {
-      margin-right: 12px;
-      width: 20px;
-      text-align: center;
-    }
-
-    /* Header container to align logo and icon */
-    .header {
-      position: fixed;
-      top: 15px;
-      left: 20px;
-      display: flex;
-      align-items: center;
-      z-index: 1100;
-    }
-
-    .hamburger {
-      font-size: 24px;
-      cursor: pointer;
-      color: white;
-      background: none;
-      border: none;
-      margin-right: 12px;
-    }
-
-    .logo {
-      font-family: 'Brush Script MT', cursive;
-      font-size: 24px;
-      color: white;
-    }
-
-    .search-icon {
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-      z-index: 1100;
-    }
-
-    .search-bar {
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      display: none;
-      z-index: 1001;
-    }
-
-    .search-bar input[type="text"] {
-      padding: 8px 12px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      outline: none;
-    }
-  </style>
+.city a {
+  display: block;
+  color: inherit;            /* inherits the blue from .city */
+  text-decoration: none;     /* removes underline */
+}
+</style>
 </head>
 <body>
 
-  <!-- Menu and Logo Container -->
-  <div class="header">
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
-    <div class="logo">Nebula</div>
-  </div>
-
-  <!-- Search Icon -->
-  <div class="search-icon" onclick="toggleSearchBar()">🔍︎</div>
-
-  <!-- Search Bar -->
-  <div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Search..." id="searchInput" />
-  </div>
-
-  <!-- Sidebar -->
-  <div class="side-menu" id="sideMenu">
-    <a href="#মূলপাতা"><i class="fas fa-home"></i> মূলপাতা</a>
-    <a href="#অধ্যয়ন"><i class="fas fa-graduation-cap"></i> অধ্যয়ন</a>
-    <a href="#নিবন্ধ"><i class="fas fa-blog"></i> নিবন্ধ</a>
-    <a href="#উৎস"><i class="fas fa-book"></i> উৎস</a>
-    <a href="#সমস্যা সমাধান"><i class="fas fa-cogs"></i> সমস্যা সমাধান</a>
-    <a href="file:///C:/Users/Hp/Downloads/Nebula%206.html"><i class="fas fa-question-circle"></i> প্রশ্ন ও উত্তর</a>
-</div>
-  <script>
-    function toggleMenu() {
-      const sideMenu = document.getElementById("sideMenu");
-      sideMenu.classList.toggle("active");
-    }
-
-    function toggleSearchBar() {
-      const searchBar = document.getElementById("searchBar");
-      searchBar.style.display = searchBar.style.display === "block" ? "none" : "block";
-    }
-  </script>
+<div class="city"><a href="file:///C:/Users/Hp/Downloads/Nebula%205.html" target="_blank"><h3>🍫 চকলেট ডে</h3></a></div>
+<div class="city"><h3>🍫 চকলেট ডে</h3></div>
+<div class="city"><h3>🍫 চকলেট ডে</h3></div>
+<div class="city"><h3>🍫 চকলেট ডে</h3></div>
+<div class="city"><h3>🍫 চকলেট ডে</h3></div>
+<div class="city"><h3>Paris</h3></div>
+<div class="city"><h3>Paris</h3></div>
+<div class="city"><h3>Paris</h3></div>
+<div class="city"><h3>Paris</h3></div>
+<div class="city"><h3>Paris</h3></div>
 
 </body>
 </html>
