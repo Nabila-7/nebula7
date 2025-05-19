@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Answer Checker</title>
+</head>
+<body>
+  <h2>Question: Name a programming language that is used for web development.</h2>
+
+  <input type="text" id="userAnswer" placeholder="Type your answer here">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer() {
+      // List of correct answers
+      const correctAnswers = ["javascript", "html", "css", "python", "php"];
+      const userInput = document.getElementById("userAnswer").value.trim().toLowerCase();
+      const result = document.getElementById("result");
+
+      if (correctAnswers.includes(userInput)) {
+        result.textContent = "Correct!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Wrong!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
